@@ -25,7 +25,7 @@ def get_schedule(KELAS, index):
   if WEEK_DAY == 5:
     rows = "Harusnya tidak ada kuliah, harap cermati sesi pengganti."
   elif WEEK_DAY == 6:
-    rows = "Minggu, tidak ada kuliah."
+    rows = "Minggu itu gak ada kuliah njay."
   else:
     sql = """SELECT * from {}.{} WHERE week_day = {};""".format(os.environ.get('DATABASE_DB', None), TABLE, WEEK_DAY)
     cursor.execute(sql)
